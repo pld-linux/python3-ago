@@ -7,12 +7,12 @@
 #
 Summary:	Makes customizable human readable timedeltas
 Name:		python-ago
-Version:	0.0.5
+Version:	0.0.6
 Release:	1
 License:	public domain
 Group:		Development/Languages/Python
 Source0:	https://pypi.python.org/packages/source/a/ago/ago-%{version}.tar.gz
-# Source0-md5:	b10434275958edf61254a43adf4662f2
+# Source0-md5:	e2fdc21fb922b4fc21ec19c6eac6bd46
 URL:		https://bitbucket.org/russellballestrini/ago/overview
 %if %{with python2}
 BuildRequires:	python-devel
