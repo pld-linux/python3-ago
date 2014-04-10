@@ -1,0 +1,17 @@
+diff -urN ago-0.0.6.org/ago.py ago-0.0.6/ago.py
+--- ago-0.0.6.org/ago.py	2014-02-25 17:44:03.000000000 +0100
++++ ago-0.0.6/ago.py	2014-04-10 21:19:49.563889851 +0200
+@@ -5,10 +5,10 @@
+     """Accepts a delta, returns a dictionary of units"""
+     delta = abs( delta )
+     return { 
+-        'year'   : int(delta.days / 365),
++        'year'   : int(delta.days // 365),
+         'day'    : int(delta.days % 365),
+-        'hour'   : int(delta.seconds / 3600),
+-        'minute' : int(delta.seconds / 60) % 60,
++        'hour'   : int(delta.seconds // 3600),
++        'minute' : int(delta.seconds // 60) % 60,
+         'second' : delta.seconds % 60,
+         'microsecond' : delta.microseconds
+     }
