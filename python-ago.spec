@@ -15,6 +15,7 @@ Source0:	https://pypi.python.org/packages/source/a/ago/ago-%{version}.tar.gz
 # Source0-md5:	e2fdc21fb922b4fc21ec19c6eac6bd46
 Patch0:		ago-python3.patch
 URL:		https://bitbucket.org/russellballestrini/ago/overview
+BuildRequires:	rpmbuild(macros) >= 1.710
 %if %{with python2}
 BuildRequires:	python-devel
 BuildRequires:	python-modules
