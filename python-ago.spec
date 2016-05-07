@@ -8,7 +8,7 @@
 Summary:	Makes customizable human readable timedeltas
 Name:		python-ago
 Version:	0.0.6
-Release:	6
+Release:	7
 License:	public domain
 Group:		Development/Languages/Python
 Source0:	https://pypi.python.org/packages/source/a/ago/ago-%{version}.tar.gz
@@ -47,30 +47,22 @@ Makes customizable human readable timedeltas.
 
 %build
 %if %{with python2}
-%py_build --build-base py2
+%py_build
 %endif
 %if %{with python3}
-%{__python3} %py_build --build-base py3
+%py3_build
 %endif
 
 %install
 rm -rf $RPM_BUILD_ROOT
 %if %{with python2}
 install -d $RPM_BUILD_ROOT%{_examplesdir}/python-%{module}-%{version}
-%py_build \
-	--build-base py2 \
-	install \
-	--optimize 2 \
-	--root=$RPM_BUILD_ROOT
+%py_install
 %endif
 
 %if %{with python3}
 install -d $RPM_BUILD_ROOT%{_examplesdir}/python3-%{module}-%{version}
-%{__python3} %py_build \
-	--build-base py3 \
-	install \
-	--optimize 2 \
-	--root=$RPM_BUILD_ROOT
+%py3_install
 %endif
 
 %clean
