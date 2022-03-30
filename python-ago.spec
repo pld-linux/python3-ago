@@ -9,7 +9,7 @@ Summary:	Makes customizable human readable timedeltas
 Summary(pl.UTF-8):	Konfigurowalne, czytelne dla człowieka różnice czasu
 Name:		python-ago
 Version:	0.0.6
-Release:	14
+Release:	15
 License:	Public Domain
 Group:		Libraries/Python
 #Source0Download: https://pypi.org/simple/ago/
