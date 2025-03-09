@@ -54,7 +54,7 @@ Konfigurowalne, czytelne dla człowieka różnice czasu.
 
 %prep
 %setup -q -n ago-%{version}
-%patch0 -p1
+%patch -P 0 -p1
 
 %build
 %if %{with python2}
